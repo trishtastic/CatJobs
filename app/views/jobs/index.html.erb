@@ -1,0 +1,10 @@
+<h1> Cats Co. Open Jobs </h1>
+
+<img src=http://www.getcatnipdaily.com/wp-content/uploads/sites/713/2014/12/12office-missile-launcher.jpg>
+
+<% @jobs.each do |job| %>
+	<h3> <%= job.title %> </h3>
+	<p> <%= job.description %></p>
+	<h5><%= link_to "Edit Posting", edit_job_path(job)%></h5>
+	<h5><%= link_to 'Delete Posting', job, method: :delete %></h5>
+<% end %>
